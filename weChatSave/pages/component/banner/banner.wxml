@@ -1,0 +1,21 @@
+<!--pages/component/banner/banner.wxml-->
+  <view style='height:{{bannerImageHeight[current]}}px'>
+      <swiper
+      class='banner-swiper'
+      indicator-dots="{{indicatorDots}}"
+      indicator-color="{{indicatorColor}}"
+      indicator-active-color="{{indicatorActiveColor}}"
+      autoplay="{{autoplay}}"
+      interval="{{interval}}"
+      circular = "{{circular}}"
+      duration="{{duration}}"
+      data-height = "{{bannerImageHeight[current]}}rpx"
+    >
+      <block wx:for="{{imgSrc}}" wx:key="*this" >
+        <swiper-item >
+          <image src="{{item}}" data-index="{{index}}" class="slide-image" bindload='imgageLoad'  mode='widthFix' style="height:{{bannerImageHeight['{{index}}']}}px"  />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+<slot></slot>

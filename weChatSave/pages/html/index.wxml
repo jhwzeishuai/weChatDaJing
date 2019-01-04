@@ -1,2 +1,4 @@
-<!--pages/html/index.wxml-->
-<text>pages/html/index.wxml</text>
+
+<view class='container'>
+  <banner img-src ="{{imgUrls}}" class="banner-template"/>
+</view>

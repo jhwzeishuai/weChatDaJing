@@ -1,15 +1,11 @@
-// pages/html/index.js
+// pages/html/user/user.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      '/pages/static/img/banner/banner1.jpg',
-      '/pages/static/img/banner/banner1.jpg',
-      '/pages/static/img/banner/banner1.jpg',
-    ],
+
   },
 
   /**
