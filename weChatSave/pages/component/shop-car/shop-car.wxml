@@ -1,0 +1,4 @@
+<view class='shopCar'>
+  <text class='iconfont icon-gouwuchekong shopCarIco'></text>
+  <text class='shop-basic-num'>{{shopNum}}</text>
+</view>

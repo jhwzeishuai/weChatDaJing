@@ -5,11 +5,45 @@ Page({
    * 页面的初始数据
    */
   data: {
+    // banner数据源
     imgUrls: [
       '/pages/static/img/banner/banner1.jpg',
       '/pages/static/img/banner/banner1.jpg',
       '/pages/static/img/banner/banner1.jpg',
     ],
+    listArr:[
+      {
+        "src":"/pages/static/img/banner/banner1.jpg",
+        "name":'太空啤酒滩',
+        "price":"129.90"
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90"
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90"
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90"
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90"
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90"
+      },
+    ],
+    shopNums:0
   },
 
   /**

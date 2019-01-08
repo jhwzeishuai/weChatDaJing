@@ -1,2 +1,8 @@
 /* pages/html/index.wxss */
 @import "../common/lib/common.wxss";
+.banner{
+  width: 100%;
+}
+.list{
+  width: 100%;
+}

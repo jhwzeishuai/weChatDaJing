@@ -34,6 +34,7 @@ App({
     })
   },
   globalData: {
-    userInfo: null
-  }
+    userInfo: null,
+    shopNum: 0 //全局购物车选择数量
+  },
 })

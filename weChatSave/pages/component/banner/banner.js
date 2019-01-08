@@ -17,7 +17,7 @@ Component({
     indicatorDots: true,
     indicatorColor:"#fff",
     indicatorActiveColor:"#666",
-    autoplay: false,
+    autoplay: true,
     interval: 5000,
     duration: 1000,
     circular: true,//是否采用衔接滑动

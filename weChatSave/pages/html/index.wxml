@@ -1,4 +1,12 @@
 
 <view class='container'>
-  <banner img-src ="{{imgUrls}}" class="banner-template"/>
+  <view class='banner'>
+    <banner img-src ="{{imgUrls}}" class="banner-template"/>
+  </view>
+  <view class='list'>
+    <shopping-list list-arr = "{{listArr}}" class="list-template"/>
+  </view>
+  <view class='shop-car-fix'>
+    <shop-car shop-num="{{shopNums}}"/>
+  </view>
 </view>

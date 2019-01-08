@@ -1,6 +1,8 @@
 {
   "navigationBarTitleText": "首页",
   "usingComponents": {
-    "banner":"../component/banner/banner"
+    "banner":"../component/banner/banner",
+    "shopping-list":"../component/shopping-list/shopping-list",
+    "shop-car": "../component/shop-car/shop-car"
   }
 }

@@ -1,0 +1,46 @@
+/* pages/component/list/shopping-list.wxss */
+@import "/pages/common/font/iconfont.wxss";
+.shoping-list{
+  float: left;
+  width: 46%;
+  margin: 5px 2%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.list-wrap{
+  display: block;
+  width: 100%;
+  font-size: 0;
+}
+.shoping-list image{
+  width: 100%;
+  height: auto;
+}
+text.price,
+text.reduce_ico,
+text.name{
+  font-size: 16px;
+  height: 25px;
+  line-height: 25px;
+}
+.list-wrap text.price{
+  color:#e39a13;
+  float: left;
+  display:inline-block;
+  line-height: 30px;
+  height:30px;
+}
+.shopIco{
+  float: right;
+  font-size: 0;
+}
+.list-wrap text.reduce_ico{
+  font-size: 25px;
+  line-height: 30px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.list-wrap text.shopNum{
+  font-size: 16px;
+  margin:0 5px;
+}

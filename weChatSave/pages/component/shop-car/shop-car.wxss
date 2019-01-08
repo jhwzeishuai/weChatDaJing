@@ -1,0 +1,29 @@
+/* pages/component/shop-car/shop-car.wxss */
+@import "/pages/common/font/iconfont.wxss";
+.shopCar{
+  position: fixed;
+  z-index: 999;
+  right: 0;
+  top: 50%;
+}
+text.shopCarIco.iconfont {
+  font-size: 55px;
+  color: #e39a13;
+  display: block;
+  height: 55px;
+  line-height: 55px;
+}
+text.shop-basic-num{
+  color: #fff;
+  position: absolute;
+  left: -5px;
+  top: -5px;
+  font-size: 18px;
+  background: red;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+
+}

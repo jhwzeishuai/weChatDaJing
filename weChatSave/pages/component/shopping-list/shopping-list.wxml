@@ -1,0 +1,18 @@
+<!--pages/component/list/shopping-list.wxml-->
+<view class='shoping-list' wx:for="{{listArr}}" wx:key="*this">
+  <view class='list-wrap'>
+    <image src='{{item.src}}' mode='widthFix'></image>
+    <view class='name_wrap'>
+      <text class='name'>{{item.name}}</text>
+    </view>
+    <view class='list-bottom'>
+      <text class='price'>￥ {{item.price}}</text>
+      <view class='shopIco' >
+        <text class='reduce_ico ico-reduce iconfont icon-subtract' data-index="{{index}}"  wx:if="{{listShopNum[index]}}" bindtap="reduceNum"></text>
+        <text class='reduce_ico shopNum' wx:if="{{listShopNum[index]}}">{{listShopNum[index]}}</text>
+        <text class='reduce_ico ico-add iconfont icon-iconfonticon02' data-index="{{index}}" bindtap="addShopNum"></text>
+      </view>
+    </view>
+    
+  </view>
+</view>
