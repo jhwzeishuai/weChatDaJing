@@ -1,2 +1,9 @@
 <!--pages/html/list/list.wxml-->
-<text>pages/html/list/list.wxml</text>
+<view class='list'>
+  <view class='list-tab-left'>
+    <view class='list-tab {{tabIndex==index?"active":""}}' wx:for = "{{tabData}}" wx:key="key" data-index = "{{index}}" bindtap='tabClick'>{{item.name}}</view>
+  </view>
+  <view class='list-tab-right'>
+
+  </view>
+</view>

@@ -1,3 +1,7 @@
 {
-  "usingComponents": {}
+  "navigationBarTitleText": "商品列表",
+  "usingComponents": {
+    "shopping-list": "../../component/shopping-list/shopping-list",
+    "shop-car": "../../component/shop-car/shop-car"
+  }
 }

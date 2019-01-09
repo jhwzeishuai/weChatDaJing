@@ -5,7 +5,20 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    // tab
+    tabIndex:0,
+    tabData: [
+      {
+        "name": '太空啤酒滩',
+        "id": '2343452345'
+      },
+      {
+        "name": '太空啤酒滩',
+        "id": '2342345234522345'
+      },
+      
+      
+    ]
   },
 
   /**
@@ -62,5 +75,13 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  // tab切换点击
+  tabClick(e){
+    console.log(e)
+    var index = e.target.dataset.index;
+    this.setData({
+      tabIndex:index
+    })
   }
 })

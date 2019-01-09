@@ -4,7 +4,7 @@
     <banner img-src ="{{imgUrls}}" class="banner-template"/>
   </view>
   <view class='list'>
-    <shopping-list list-arr = "{{listArr}}" class="list-template"/>
+    <shopping-list list-arr = "{{listArr}}" class="list-template" bind:shopChange="shopListChange"/>
   </view>
   <view class='shop-car-fix'>
     <shop-car shop-num="{{shopNums}}"/>

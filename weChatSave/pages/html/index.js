@@ -15,32 +15,81 @@ Page({
       {
         "src":"/pages/static/img/banner/banner1.jpg",
         "name":'太空啤酒滩',
-        "price":"129.90"
+        "price":"129.90",
+        "id":'2342345'
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
-        "price": "129.90"
+        "price": "129.90",
+        "id": '234234522345'
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
-        "price": "129.90"
+        "price": "129.90",
+        "id": '232542345'
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
-        "price": "129.90"
+        "price": "129.90",
+        "id": '23422354345'
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
-        "price": "129.90"
+        "price": "129.90",
+        "id": '23425342345'
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
-        "price": "129.90"
+        "price": "129.90",
+        "id": '2342345345'
+      },
+    ],
+    listArr2: [
+      '/pages/static/img/banner/banner1.jpg',
+      '/pages/static/img/banner/banner1.jpg',
+      '/pages/static/img/banner/banner1.jpg',
+    ],
+    listArr3: [
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90",
+        "id": '2342345'
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90",
+        "id": '234234522345'
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90",
+        "id": '232542345'
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90",
+        "id": '23422354345'
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90",
+        "id": '23425342345'
+      },
+      {
+        "src": "/pages/static/img/banner/banner1.jpg",
+        "name": '太空啤酒滩',
+        "price": "129.90",
+        "id": '2342345345'
       },
     ],
     shopNums:0
@@ -64,7 +113,10 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-
+    var aa = this.data.listArr3;
+    this.setData({
+      listArr:aa
+    })
   },
 
   /**
@@ -100,5 +152,18 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  shopListChange(e){
+    const app = getApp();
+    var shopListJson = app.globalData.shopListJson,
+        num=0;
+    for (var key in shopListJson){
+      if (shopListJson[key]) num += shopListJson[key]
+    }
+    num = num?num:0;
+    console.log(shopListJson)
+    this.setData({
+      shopNums:num
+    })
   }
 })

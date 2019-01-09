@@ -3,7 +3,7 @@
     "pages/html/index",
     "pages/logs/logs",
     "pages/html/list/list",
-    "pages/html/shoping/shoping",
+    "pages/html/shopping/shopping",
     "pages/html/user/user"
   ],
   "window": {
@@ -30,7 +30,7 @@
         "selectedIconPath": "/pages/static/img/menu/list_ico_hover.png"
       },
       {
-        "pagePath": "pages/html/shoping/shoping",
+        "pagePath": "pages/html/shopping/shopping",
         "text": "购物车",
         "iconPath": "/pages/static/img/menu/shoping_ico.png",
         "selectedIconPath": "/pages/static/img/menu/shoping_ico_hover.png"
