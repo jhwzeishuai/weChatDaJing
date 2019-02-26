@@ -1,0 +1,28 @@
+<!--pages/component/shop-car-list/shop-car-list.wxml-->
+<view class='shop-car-list clearfix' wx:for="{{shopCarListArr}}" wx:key="key" data-id='{{item.id}}'>
+  <checkbox-group class='inlineBlock' bindchange="checkboxChange" data-index="{{index}}">
+    <label class='inlineBlock'>
+      <checkbox value='{{item.value}}' checked='{{item.checked}}' ></checkbox>
+    </label>
+  </checkbox-group>
+  <image class='inlineBlock commodity-img' src='{{item.src}}' mode='scaleToFill' ></image>
+  <view class='text-right inlineBlock'>
+    <text class='text-content'>{{item.text}}</text>
+    <text class='text-type'>包装:价格</text>
+    <view class='num-exit '>
+      <text class='reduce_ico ico-add iconfont icon-subtract' data-index="{{index}}" catchtap="reduceNum"></text>
+      <input class='commodity-num-input' type='number' value='{{item.choseNum}}' data-index="{{index}}" bindblur="inputChangeNum"></input>
+      <text class='reduce_ico ico-add iconfont icon-iconfonticon02' data-index="{{index}}" catchtap="addShopNum"></text>
+    </view>
+  </view>
+  <view class='list-price inlineBlock'>
+    <view class='old-price'>
+      ￥
+      <text>{{item.oldPrice}}</text>
+    </view>
+    <view class='now-price'>
+      ￥
+      <text>{{item.price}}</text>
+    </view>
+  </view>
+</view>

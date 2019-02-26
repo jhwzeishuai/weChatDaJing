@@ -36,6 +36,35 @@ App({
   globalData: {
     userInfo: null,
     shopNum: 0 ,//全局购物车选择数量
-    shopListJson:{},//所选商品
+    shopListJson:{},//所选商品ids:num
   },
+  //为列表的每个元素添加choseNum属性
+  jsonArrAddNum(arr){
+    for(let i = 0;i<arr.length;i++){
+      arr[i].choseNum = 0
+    }
+    return arr
+  },
+  // 根据所选择的id及数量change默认商品列表
+  filterArrChoose(arr){
+    var shopListJson = this.globalData.shopListJson;
+    for(let i = 0;i<arr.length;i++){
+      for (var key in shopListJson){
+        if(key == arr[i].id){
+          arr[i].choseNum = shopListJson[key]
+        }
+      }
+    }
+    return arr
+  },
+  // 获取当前购物车数量
+  getAllNum(){
+    var shopListJson = this.globalData.shopListJson,
+      num = 0;
+    for (var key in shopListJson) {
+      if (shopListJson[key]) num += shopListJson[key]
+    }
+    num = num ? num : 0;
+    return num
+  }
 })

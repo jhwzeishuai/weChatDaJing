@@ -1,1 +1,76 @@
 /* pages/html/shopping/shopping.wxss */
+@import "/pages/common/font/iconfont.wxss";
+.shop-car-content{
+  padding: 20rpx 20rpx 140rpx 20rpx;
+}
+.no-data{
+  text-align: center;
+  padding-top: 30px;
+}
+.no-data .shopCarIco{
+  font-size: 228rpx;
+  color: rgb(238, 232, 232);
+}
+.no-data-title{
+  line-height: 60rpx;
+  font-size: 28rpx;
+  display: block;
+  color: #999;
+}
+.no-data button{
+  border: 2rpx solid #333;
+  font-size: 28rpx;
+  color: #333;
+  padding: 10rpx 40rpx;
+  display: inline-block;
+  border-radius: 16rpx;
+  background: none;
+  margin-top: 30rpx;
+}
+.icon-bingbang{
+  color: #e39a13;
+  font-size: 44rpx;
+}
+.list-title-content{
+  line-height: 80rpx;
+}
+.balance-fixe{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 80rpx;
+  background: #f1f1f1;
+  line-height: 80rpx;
+  text-align: right;
+  border-top: 1px solid #ccc;
+  z-index: 9999;
+  vertical-align: middle;
+  padding: 20rpx 0;
+  width: 100%;
+
+}
+.balance-fixe text{
+  color: #FA0000;
+  display:inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  font-size: 36rpx;
+}
+.balance-fixe button{
+  display: inline-block;
+  vertical-align: middle;
+  width: 160rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  background: #FF7A03;
+  margin-right: 20rpx;
+
+}
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}

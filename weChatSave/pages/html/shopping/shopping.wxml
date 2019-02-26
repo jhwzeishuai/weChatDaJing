@@ -1,2 +1,23 @@
 <!--pages/html/shopping/shopping.wxml-->
-<text>pages/html/shopping/shopping.wxml</text>
+
+<view class='shop-car-content'>
+  <view class='list' wx:if="{{noData ==false}}">
+    <view class='list-title-content'>
+      <text class='iconfont icon-bingbang'></text>
+      <text class='list-title'> 商品来自：大静家的甜品屋~</text>
+    </view>
+    <view class='list-content'>
+        <shop-car-list shop-car-list-arr="{{shopCarListArr}}" bind:shopChange="shopChangeList" />
+    </view>
+  </view>
+  <view class='no-data' wx:if="{{noData==true}}">
+    <text class='iconfont icon-gouwuchekong shopCarIco'></text>
+    <text class='no-data-title'>购物车空空如也~</text>
+    <button bindtap='goShopListPage'>主人快去给我找点东西吧</button>
+  </view>
+</view>
+<!-- 结算总价定位 -->
+<view class='balance-fixe'>
+    <text>总计：￥{{totalPrice}}(不包含邮费)</text>
+    <button>结算</button>
+</view>

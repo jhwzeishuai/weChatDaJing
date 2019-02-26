@@ -16,81 +16,49 @@ Page({
         "src":"/pages/static/img/banner/banner1.jpg",
         "name":'太空啤酒滩',
         "price":"129.90",
-        "id":'2342345'
+        "id":'2342345',
+        "choseNum":0
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
         "price": "129.90",
-        "id": '234234522345'
+        "id": '234234522345',
+        "choseNum": 0
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
         "price": "129.90",
-        "id": '232542345'
+        "id": '232542345',
+        "choseNum": 0
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
         "price": "129.90",
-        "id": '23422354345'
+        "id": '23422354345',
+        "choseNum": 0
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
         "price": "129.90",
-        "id": '23425342345'
+        "id": '23425342345',
+        "choseNum": 0
       },
       {
         "src": "/pages/static/img/banner/banner1.jpg",
         "name": '太空啤酒滩',
         "price": "129.90",
-        "id": '2342345345'
+        "id": '2342345345',
+        "choseNum": 0
       },
     ],
     listArr2: [
       '/pages/static/img/banner/banner1.jpg',
       '/pages/static/img/banner/banner1.jpg',
       '/pages/static/img/banner/banner1.jpg',
-    ],
-    listArr3: [
-      {
-        "src": "/pages/static/img/banner/banner1.jpg",
-        "name": '太空啤酒滩',
-        "price": "129.90",
-        "id": '2342345'
-      },
-      {
-        "src": "/pages/static/img/banner/banner1.jpg",
-        "name": '太空啤酒滩',
-        "price": "129.90",
-        "id": '234234522345'
-      },
-      {
-        "src": "/pages/static/img/banner/banner1.jpg",
-        "name": '太空啤酒滩',
-        "price": "129.90",
-        "id": '232542345'
-      },
-      {
-        "src": "/pages/static/img/banner/banner1.jpg",
-        "name": '太空啤酒滩',
-        "price": "129.90",
-        "id": '23422354345'
-      },
-      {
-        "src": "/pages/static/img/banner/banner1.jpg",
-        "name": '太空啤酒滩',
-        "price": "129.90",
-        "id": '23425342345'
-      },
-      {
-        "src": "/pages/static/img/banner/banner1.jpg",
-        "name": '太空啤酒滩',
-        "price": "129.90",
-        "id": '2342345345'
-      },
     ],
     shopNums:0
   },
@@ -113,10 +81,7 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-    var aa = this.data.listArr3;
-    this.setData({
-      listArr:aa
-    })
+    this.showChange()
   },
 
   /**
@@ -153,17 +118,29 @@ Page({
   onShareAppMessage: function () {
 
   },
-  shopListChange(e){
+  showChange(){
     const app = getApp();
-    var shopListJson = app.globalData.shopListJson,
-        num=0;
-    for (var key in shopListJson){
-      if (shopListJson[key]) num += shopListJson[key]
-    }
-    num = num?num:0;
-    console.log(shopListJson)
+    var _data = this.data;
+    var newListArr = app.filterArrChoose(_data.listArr);
     this.setData({
-      shopNums:num
+      shopNums: app.getAllNum(),
+      listArr: newListArr
     })
+  },
+  // 添加商品更新购物车数量
+  shopListChange(e){
+    var _data = this.data;
+    const app = getApp();
+    var detail = e.detail;
+    var arrIndex = "listArr["+ detail.index +"].choseNum"
+    this.setData({
+      [arrIndex]: detail.num
+    });
+    this.setData({
+      shopNums: app.getAllNum()
+    })
+    
+    
+
   }
 })

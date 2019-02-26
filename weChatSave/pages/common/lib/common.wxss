@@ -2,3 +2,17 @@
   width: 100%;
   text-align: center;
 }
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
